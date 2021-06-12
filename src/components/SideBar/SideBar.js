@@ -1,5 +1,4 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 const SideBar = ({ items, isShowItems }) => {
     let totalRestaurants=0;
     items.forEach((item,index) => {       
@@ -14,7 +13,7 @@ const SideBar = ({ items, isShowItems }) => {
                     items.map((item,index) => {
                         return (
                             <>
-                                <a activeClassName="selected" onClick={() => isShowItems(true)}  key={index} className="list-group-item list-group-item-action" href={
+                                <a onClick={() => isShowItems(true)}  key={index} className="list-group-item list-group-item-action" href={
                                     (item.category ==="offers near you" && "#offersNearYou") ||
                                     (item.category === "Express delivery" && "#expressDelivery") ||
                                     (item.category === "Gourmet" && "#gourmet") ||
