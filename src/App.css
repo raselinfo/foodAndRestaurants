@@ -1,38 +1,109 @@
-.App {
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.side__bar .list-group {
+  position: fixed;
+  margin-top: 20rem;
+}
+
+.side__bar .list-group .list-group-item {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+}
+
+.side__bar .list-group .list-group-item span {
+  display: block;
+  text-transform: capitalize;
+  font-size: 1.8rem;
+}
+
+.popular__brand h2 {
+  font-size: 3rem;
+  text-transform: capitalize;
+}
+
+.popular__brand .card {
+  border: none;
+  margin-bottom: 2rem;
+}
+
+.popular__brand .card:hover > .card-footer {
+  visibility: visible;
+}
+
+.popular__brand .card:hover {
+  -webkit-box-shadow: 0rem 0rem .5rem .5rem whitesmoke;
+          box-shadow: 0rem 0rem .5rem .5rem whitesmoke;
+}
+
+.popular__brand .card h3 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-top: 1rem;
+}
+
+.popular__brand .card .foodType {
+  background: #ECECEC;
+  padding: .5rem;
+  margin: .5rem;
+  border-radius: 1rem;
+  font-size: 1.1rem;
+  color: #979797;
+  display: inline-block;
+}
+
+.popular__brand .card .card__footer-up {
+  color: #979797;
+  font-weight: bold;
+}
+
+.popular__brand .card .rating {
+  background: #48C479;
+  color: #fff;
+  padding: .2rem .5rem;
+  font-size: 1.1rem;
+}
+
+.popular__brand .card .time, .popular__brand .card .price {
+  font-size: 1.1rem;
+}
+
+.popular__brand .card .card-footer {
+  background: none;
+  visibility: hidden;
+}
+
+.popular__brand .card .card-footer a {
+  font-size: 1.8rem;
+  color: #979797;
+}
+
+.show__more {
+  height: 200px;
+  cursor: pointer;
+}
+
+.show__more .card-body {
+  position: relative;
+}
+
+.show__more .overlay {
+  background: rgba(0, 0, 0, 0.432);
+  color: #ECECEC;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.show__more .overlay h3 {
+  font-size: 4rem;
   text-align: center;
+  line-height: 200px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/*# sourceMappingURL=App.css.map */
