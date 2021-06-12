@@ -1,36 +1,38 @@
 import React from 'react';
+import { HashLink, NavHashLink } from 'react-router-hash-link';
 const SideBar = ({ items, isShowItems }) => {
-    let totalRestaurants=0;
-    items.forEach((item,index) => {       
+    let totalRestaurants = 0;
+    items.forEach((item, index) => {
         totalRestaurants = totalRestaurants + item.restaurantList.length
-  });   
+    });
 
-  
+
     return (
         <aside className="side__bar">
-            <div  className="list-group">
+            <div id="list-example" className="list-group">
                 {
-                    items.map((item,index) => {
+                    items.map((item, index) => {
                         return (
                             <>
-                                <a onClick={() => isShowItems(true)}  key={index} className="list-group-item list-group-item-action" href={
-                                    (item.category ==="offers near you" && "#offersNearYou") ||
+                                <NavHashLink onClick={() => isShowItems(true)} key={index} className="list-group-item list-group-item-action" to={
+                                    (item.category === "offers near you" && "#offersNearYou") ||
                                     (item.category === "Express delivery" && "#expressDelivery") ||
                                     (item.category === "Gourmet" && "#gourmet") ||
-                                    (item.category === "popular brands" && "#popularBrand")
+                                    (item.category === "popular brands" && "#popularBrand") ||
+                                    (item.category === "Only In Swiggy" && "#onlyInSwiggy")
                                 }>
                                     {item.category}
                                     <span className="total__restaurants">{item.restaurantList.length} restaurants</span>
-                                </a>
+                                </NavHashLink>
                             </>
                         )
                     })
-                   
+
                 }
-                <a className="list-group-item list-group-item-action" href="#all" onClick={() => isShowItems(false)}>
+                <NavHashLink className="list-group-item list-group-item-action" to="#all" onClick={() => isShowItems(false)}>
                     See All
                     <span className="total__restaurants">{totalRestaurants} restaurants</span>
-                </a>
+                </NavHashLink>
             </div>
         </aside>
     );

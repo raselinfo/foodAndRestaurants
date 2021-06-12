@@ -10,7 +10,11 @@ $secondary-color:#48C479;
 $dark:#000;
 $gray:#979797;
 $light-gray:#ECECEC;
-
+//*** Reset Code ***
+.list-group-item.active {
+  background: $primary-color !important;
+  border    : .1rem solid $primary-color !important;
+}
 // Side Bar
 .side__bar{
   .list-group{

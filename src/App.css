@@ -7,6 +7,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.list-group-item.active {
+  background: #FA4A5B !important;
+  border: 0.1rem solid #FA4A5B !important;
+}
+
 .side__bar .list-group {
   position: fixed;
   margin-top: 20rem;

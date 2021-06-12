@@ -5,6 +5,7 @@ import AllFood from '../AllFood/AllFood';
 import ExpressDelivery from '../ExpressDelivery/ExpressDelivery';
 import GourMet from '../GourMet/GourMet';
 import OffersNearYou from '../OffersNearYou/OffersNearYou';
+import OnlySwiggy from '../OnlySwiggy/OnlySwiggy';
 import PopulerBrand from '../PopulerBrand/PopulerBrand';
 
 const Items = ({ isShow}) => {
@@ -18,6 +19,7 @@ const Items = ({ isShow}) => {
                         <OffersNearYou items={items}></OffersNearYou>
                         <ExpressDelivery items={items}></ExpressDelivery>
                         <GourMet items={items}></GourMet>
+                        <OnlySwiggy items={items}></OnlySwiggy>
                     </> : <AllFood items={items}></AllFood>
                 }
              

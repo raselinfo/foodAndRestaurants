@@ -8,10 +8,11 @@ const AllFood = ({ items }) => {
     const [offer, setOffer] = useState(items[1])
     const [express, setExpress] = useState(items[2])
     const [gourmet, setGourmet] = useState(items[3])
+    const [swiggy, setSwiggy] = useState(items[4])
     const [allFood, setAllFood] = useState([])
 
     useEffect(()=>{
-        const newFood = [...popular.restaurantList,...offer.restaurantList,...express.restaurantList,...gourmet.restaurantList]
+        const newFood = [...popular.restaurantList, ...offer.restaurantList, ...express.restaurantList, ...gourmet.restaurantList, ...swiggy.restaurantList]
         setAllFood(newFood)
     },[])
     
